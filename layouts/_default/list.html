@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{ .Content }}
+
+<div class="artist-grid">
+    {{ range .Pages }}
+      <div class="inner">
+        <a href="{{ .RelPermalink }}">
+          <figure>
+              {{ with .Resources.GetMatch "*_LEADIMAGE*" }}
+                  {{ $resource := . }}
+                  {{ if strings.HasSuffix $resource.Name ".png"  }}
+                    <img src="{{ $resource.RelPermalink }}" alt="" />
+                  {{ else }}
+                      {{ $image := $resource.Resize "680x" }}
+                    <img src="{{ $image.RelPermalink }}" alt="" />
+                  {{ end }}
+              {{ end }}
+            <figcaption>{{ .LinkTitle }}</figcaption>
+          </figure>
+        </a>
+      </div>
+    {{ end }}
+</div>
+
+{{ end }}

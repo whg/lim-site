@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div class="home">
+  <div class="inner">
+    <div class="logos">
+      <img src="/images/lim-logo.svg" />
+      <pre class="text">{{ .RawContent }}</pre>
+    </div>
+
+    <div class="artists">
+    {{ $artists := where site.Pages "Type" "==" "artists" }}
+      {{ range $artists }}
+          {{ if ne .Title "Artists" }}
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}

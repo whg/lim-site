@@ -1,0 +1,21 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-gb'
+title = 'Light in Motion'
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[[menus.main]]
+name = 'Artists'
+pageRef = '/artists'
+weight = 10
+
+[[menus.main]]
+name = 'Events'
+pageRef = '/events'
+weight = 20
+
+[[menus.main]]
+name = 'About'
+pageRef = '/about'
+weight = 30

@@ -1,0 +1,219 @@
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+body {
+  margin: 1rem;
+  overflow-y: scroll;
+}
+
+a {
+  text-decoration: unset;
+  color: unset;
+}
+
+body > div.container {
+  width: 100%;
+  max-width: 1030px;
+  margin: 1rem auto 0;
+}
+
+div.home {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background: url('/images/lim-background-1200.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div.home p, div.home pre {
+  margin: 0;
+}
+
+div.home div.inner {
+  width: 80%;
+  max-width: 2000px;
+  display: flex;
+  flex-flow: column;
+}
+
+div.home div.inner div.logos {
+  width: 80%;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10rem;
+}
+
+@media (max-width: 1000px) {
+  div.home div.inner div.logos {
+    flex-flow: column;
+  }
+}
+
+div.home div.inner img {
+  width: 100%;
+  object-fit: contain;
+}
+
+div.home div.inner pre {
+  font-family: "Noto Sans", sans-serif;
+  font-size: calc(1vh + 1vw);
+  margin-top: calc(1vh + 1vw);
+  margin-left: 6rem;
+}
+
+@media (max-width: 1000px) {
+  div.home div.inner pre {
+    white-space: normal;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  div.home div.inner pre {
+    margin-left: 0;
+  }
+}
+
+div.home div.inner div.artists {
+  text-align: right;
+  margin-right: 2rem;
+  font-size: calc(1.2vh + 1vw);
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 4rem;
+}
+
+header img {
+  height: 55px;
+  margin-left: 1rem;
+}
+
+header nav {
+  margin-right: 1rem;
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+footer {
+  position: absolute;
+  width: calc(100% - 10px);
+  font-size: 0.75rem;
+  text-align: center;
+  bottom: 0.5rem;
+}
+
+a.active {
+  border-bottom: 1px solid #000;
+}
+
+a:visited {
+  color: unset;
+}
+
+div.page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+div.artist img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+div.artist .meta h2 {
+  margin-bottom: 0.5rem;
+}
+div.artist .meta p {
+  margin: 0;
+  color: #555;
+}
+
+div.artist-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+div.artist-grid a {
+  padding: 10px;
+}
+
+figure {
+  width: 100%;
+  margin: 0;
+}
+
+figure img {
+  width: 100%;
+}
+
+figcaption {
+  text-align: left;
+  margin-left: 0.5rem;
+  color: #444;
+}
+
+div.artist-grid .inner {
+  width: 33.333%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1020px) {
+  header img {
+    margin-left: 0;
+  }
+
+  header nav {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  header img {
+    height: 30px;
+  }
+
+  div.artist-grid .inner {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+
+  div.artist-grid a {
+    padding: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  header nav a {
+    font-size: 0.9rem;
+  }
+}

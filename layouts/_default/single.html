@@ -1,0 +1,47 @@
+{{ define "main" }}
+  <div class="page artist">
+    <h1>{{ .Title }}</h1>
+    <div class="meta">
+      <h2>{{ .Params.work }}</h2>
+      <p>{{ .Params.year }}</p>
+      <p>{{ .Params.material }}</p>
+      <p>{{ .Params.dims }}</p>
+    </div>
+
+    {{ if .Params.work2 }}
+      <div class="meta">
+        <h2>{{ .Params.work2 }}</h2>
+        <p>{{ .Params.year2 }}</p>
+        <p>{{ .Params.material2 }}</p>
+        <p>{{ .Params.dims2 }}</p>
+      </div>
+    {{ end }}
+
+    {{ $parts := (split .Content "|||") }}
+    <div class="work-text">
+        {{ safeHTML (index $parts 0) }}
+    </div>
+
+    {{ range .Resources.Match "*{png,jpg,gif}" }}
+    <figure>
+          {{ $resource := . }}
+          {{ if strings.HasSuffix $resource.Name ".gif" }}
+            <img src="{{ $resource.RelPermalink }}" alt=""/>
+          {{ else if (and (strings.HasSuffix $resource.Name ".png") (not (in $resource.Name "_main"))) }}
+            <img src="{{ $resource.RelPermalink }}" alt=""/>
+          {{ else if not (in $resource.Name "_main") }}
+              {{ $image := $resource }}
+              {{ if (not (in $image.Name "_leave")) }}
+                  {{ $image = $resource.Fit "900x900" }}
+              {{ end }}
+            <img src="{{ $image.RelPermalink }}" alt=""/>
+          {{ end }}
+      <figcaption></figcaption>
+    </figure>
+    {{ end }}
+
+    <div class="bio-text">
+        {{ (index $parts 1) | safeHTML }}
+    </div>
+  </div>
+{{ end }}
