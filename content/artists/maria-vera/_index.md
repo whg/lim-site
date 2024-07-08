@@ -7,7 +7,7 @@ dims: Dimensions variable
 edition: Unique
 website: 
 instagram:
-email:
+email: maria@dreamswork.co.uk
 layout: single
 draft: false
 ---

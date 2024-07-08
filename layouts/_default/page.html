@@ -1,7 +1,6 @@
 {{ define "main" }}
-    page
-    <div class="page">
-        <h1>{{ .Title }}</h1>
-        {{ .Content }}
-    </div>
+<div class="page {{ lower .Title }}">
+    <h1>{{ .Title }}</h1>
+    {{ safeHTML .Content }}
+</div>
 {{ end }}

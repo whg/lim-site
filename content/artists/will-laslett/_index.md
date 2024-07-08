@@ -7,7 +7,7 @@ dims: 14 x 14 x 14 cm
 edition:
 website:
 instagram:
-email:
+email: willlaslett@gmail.com
 layout: single
 draft: false
 ---

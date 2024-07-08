@@ -10,7 +10,7 @@ material2: Powder coated aluminium, Jesmonite, bespoke LED board and PCB
 dims2:  60 x 40 x 4 cm
 website: 
 instagram:
-email:
+email: info@kailaboratory.com
 layout: single
 draft: false
 ---

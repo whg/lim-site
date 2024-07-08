@@ -1,20 +1,15 @@
 {{ define "main" }}
   <div class="page artist">
     <h1>{{ .Title }}</h1>
-    <div class="meta">
-      <h2>{{ .Params.work }}</h2>
-      <p>{{ .Params.year }}</p>
-      <p>{{ .Params.material }}</p>
-      <p>{{ .Params.dims }}</p>
-    </div>
 
-    {{ if .Params.work2 }}
-      <div class="meta">
-        <h2>{{ .Params.work2 }}</h2>
-        <p>{{ .Params.year2 }}</p>
-        <p>{{ .Params.material2 }}</p>
-        <p>{{ .Params.dims2 }}</p>
-      </div>
+    {{ range .Resources.Match "*{png,jpg,gif}" }}
+    {{ $resource := . }}
+      {{ if (in $resource.Name "_LEAD") }}
+        <figure>
+          {{ $image := $resource }}
+          <img src="{{ $image.RelPermalink }}" alt=""/>
+        </figure>
+      {{ end }}
     {{ end }}
 
     {{ $parts := (split .Content "|||") }}
@@ -22,26 +17,45 @@
         {{ safeHTML (index $parts 0) }}
     </div>
 
+    <div class="meta">
+      <div>
+        <h3>{{ .Params.work }}</h3>
+        <p>{{ .Params.year }}</p>
+        <p>{{ .Params.material }}</p>
+        <p>{{ .Params.dims }}</p>
+      </div>
+
+      {{ if .Params.work2 }}
+        <div>
+          <h3>{{ .Params.work2 }}</h3>
+          <p>{{ .Params.year2 }}</p>
+          <p>{{ .Params.material2 }}</p>
+          <p>{{ .Params.dims2 }}</p>
+        </div>
+      {{ end }}
+    </div>
+
     {{ range .Resources.Match "*{png,jpg,gif}" }}
-    <figure>
-          {{ $resource := . }}
-          {{ if strings.HasSuffix $resource.Name ".gif" }}
-            <img src="{{ $resource.RelPermalink }}" alt=""/>
-          {{ else if (and (strings.HasSuffix $resource.Name ".png") (not (in $resource.Name "_main"))) }}
-            <img src="{{ $resource.RelPermalink }}" alt=""/>
-          {{ else if not (in $resource.Name "_main") }}
-              {{ $image := $resource }}
-              {{ if (not (in $image.Name "_leave")) }}
-                  {{ $image = $resource.Fit "900x900" }}
-              {{ end }}
-            <img src="{{ $image.RelPermalink }}" alt=""/>
-          {{ end }}
-      <figcaption></figcaption>
-    </figure>
+    {{ $resource := . }}
+    {{ if not (in $resource.Name "_LEAD") }}
+      <figure>
+        {{ $image := $resource }}
+        {{ if (not (in $image.Name "_leave")) }}
+            {{ $image = $resource.Fit "900x900" }}
+        {{ end }}
+        <img src="{{ $image.RelPermalink }}" alt=""/>
+      </figure>
+    {{ end }}
     {{ end }}
 
     <div class="bio-text">
         {{ (index $parts 1) | safeHTML }}
     </div>
+
+    <address>{{ .Params.email }}</address>
+    {{ if .Params.email2 }}
+      <address>{{ .Params.email2 }}</address>
+    {{ end }}
+
   </div>
 {{ end }}

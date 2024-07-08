@@ -7,7 +7,7 @@ dims: 746 x 746 x 101 mm
 edition:
 website:
 instagram:
-email:
+email: studio@starholden.com
 layout: single
 draft: false
 ---

@@ -7,7 +7,7 @@ dims: Dimensions variable
 edition:
 website:
 instagram:
-email:
+email: sophiemei.birkin@gmail.com
 layout: single
 draft: false
 ---
