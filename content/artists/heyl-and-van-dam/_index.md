@@ -11,7 +11,8 @@ material2: Wood and acrylic
 dims2: 100 x 100 cm
 edition2:
 website: 
-instagram:
+instagram: parkerheyl
+instagram2: macvandam
 email: parker.heyl@gmail.com
 email2: mackenzie.vandam@ucl.ac.uk
 layout: single

@@ -6,7 +6,7 @@ material: LED array, bespoke electronics, glass, ink, optical film, metal frame,
 dims: 60 x 60 x 4 cm
 edition:
 website:
-instagram:
+instagram: relativedistance.studio
 email: contact@relativedistance.co.uk
 layout: single
 draft: false

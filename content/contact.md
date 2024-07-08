@@ -5,15 +5,17 @@ draft: false
 ---
 
 ## Exhibition
-Sean Malikides and Jessie Temple  
-<address>contact@lightinmotion.show</address>
+
+Sean Malikides & Jessie Temple  
+contact@lightinmotion.show
 
 ## Venue
 
-Connor Rankin +4420 7739 2279  
-<address>connor@acrylicize.com</address>
+Connor Rankin  
++4420 7739 2279    
+connor@acrylicize.com
 
 ## Press
 
 Owen O'Leary  
-<address>owen@owenoleary.com</address>
+owen@owenoleary.com

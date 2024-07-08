@@ -1,8 +1,8 @@
-+++
-title = 'Events'
-date = 2023-01-01T08:00:00-07:00
-draft = false
-+++
+---
+title: Events
+layout: page
+draft: false
+---
 
 awe.curation is one of the fastest-growing digital channels advocating for the expanding field of technology art and a friend of the exhibition. They are programming interactive Creative Workshops at the venue and promoting the exhibition and artists through their online platform. 
 

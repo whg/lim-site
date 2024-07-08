@@ -5,7 +5,7 @@
     {{ range .Resources.Match "*{png,jpg,gif}" }}
     {{ $resource := . }}
       {{ if (in $resource.Name "_LEAD") }}
-        <figure>
+        <figure class="lead-image">
           {{ $image := $resource }}
           <img src="{{ $image.RelPermalink }}" alt=""/>
         </figure>
@@ -37,11 +37,11 @@
 
     {{ range .Resources.Match "*{png,jpg,gif}" }}
     {{ $resource := . }}
-    {{ if not (in $resource.Name "_LEAD") }}
+    {{ if and (not (in $resource.Name "_LEAD")) (not (in $resource.Name "_GRID")) }}
       <figure>
         {{ $image := $resource }}
         {{ if (not (in $image.Name "_leave")) }}
-            {{ $image = $resource.Fit "900x900" }}
+          {{ $image = $resource.Fit "900x900" }}
         {{ end }}
         <img src="{{ $image.RelPermalink }}" alt=""/>
       </figure>
@@ -52,9 +52,14 @@
         {{ (index $parts 1) | safeHTML }}
     </div>
 
-    <address>{{ .Params.email }}</address>
+    <a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a>
     {{ if .Params.email2 }}
-      <address>{{ .Params.email2 }}</address>
+      <a href="mailto:{{ .Params.email2 }}">{{ .Params.email2 }}</a>
+    {{ end }}
+
+    <a href="https://www.instagram.com/{{ .Params.instagram }}">@{{ .Params.instagram }}</a>
+    {{ if .Params.email2 }}
+      <a href="https://www.instagram.com/{{ .Params.instagram2 }}">{{ .Params.instagram2 }}</a>
     {{ end }}
 
   </div>

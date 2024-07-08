@@ -6,7 +6,7 @@ material: Steel, Plaster, PCB, LED, Code
 dims: 746 x 746 x 101 mm
 edition:
 website:
-instagram:
+instagram: studiostarholden
 email: studio@starholden.com
 layout: single
 draft: false

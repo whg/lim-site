@@ -5,7 +5,7 @@ year: 2024
 material: Assorted Polymers
 dims: 180 x 80 x 80 cm 
 website: https://www.duncancarter.info
-instagram: 
+instagram: duncan.carter
 email: duncan@duncancarter.info
 layout: single
 draft: false

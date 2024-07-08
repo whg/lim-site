@@ -6,7 +6,7 @@ material: Aluminium and LED
 dims: 14 x 14 x 14 cm
 edition:
 website:
-instagram:
+instagram: will_laslett
 email: willlaslett@gmail.com
 layout: single
 draft: false

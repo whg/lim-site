@@ -1,8 +1,8 @@
-+++
-title = 'About'
-date = 2023-01-01T08:00:00-07:00
-draft = false
-+++
+---
+title: About
+layout: page
+draft: false
+---
 
 Light in Motion brings together a group of innovative and imaginative artists, designers and creative technologists.  Harnessing contemporary materials and cutting edge technologies they convey ideas about light, space, time, movement and perception. The exhibition includes collectible design objects, lights, wall based artworks and mesmerising installations.
 

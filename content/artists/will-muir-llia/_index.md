@@ -6,7 +6,7 @@ material: LED displays, circuit boards, steel, acrylic, code
 dims: 817 x 427 x 27 mm
 edition:
 website:
-instagram:
+instagram: willmuirllia
 email: will@llia.io
 layout: single
 draft: false

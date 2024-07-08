@@ -6,7 +6,7 @@ material: Bio-resin, aluminium, biomatter, LEDs
 dims: Dimensions variable
 edition:
 website:
-instagram:
+instagram: sophie.m.e.i
 email: sophiemei.birkin@gmail.com
 layout: single
 draft: false

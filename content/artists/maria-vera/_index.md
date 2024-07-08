@@ -6,7 +6,7 @@ material: Steel, glass, spotlight
 dims: Dimensions variable
 edition: Unique
 website: 
-instagram:
+instagram: mariavera.dreamswork
 email: maria@dreamswork.co.uk
 layout: single
 draft: false

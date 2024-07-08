@@ -6,7 +6,7 @@
       <div class="inner">
         <a href="{{ .RelPermalink }}">
           <figure>
-              {{ with .Resources.GetMatch "*_LEADIMAGE*" }}
+              {{ with .Resources.GetMatch "*_GRID*" }}
                   {{ $resource := . }}
                   {{ if strings.HasSuffix $resource.Name ".png"  }}
                     <img src="{{ $resource.RelPermalink }}" alt="" />
