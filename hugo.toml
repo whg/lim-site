@@ -10,10 +10,10 @@ name = 'Artists'
 pageRef = '/artists'
 weight = 10
 
-[[menus.main]]
-name = 'Events'
-pageRef = '/events'
-weight = 20
+#[[menus.main]]
+#name = 'Events'
+#pageRef = '/events'
+#weight = 20
 
 [[menus.main]]
 name = 'About'
